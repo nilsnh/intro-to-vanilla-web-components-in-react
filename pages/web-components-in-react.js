@@ -1,5 +1,10 @@
 import Head from 'next/head'
+import dynamic from 'next/dynamic'
 import Counter from '../components/counter'
+
+const ChillCounter = dynamic(() => import('../components/chill-counter'), {
+  ssr: false,
+})
 
 export default function WCInReact() {
   const pageTitle = 'Web komponenter i React'
@@ -14,7 +19,7 @@ export default function WCInReact() {
         <Counter />
       </Example>
       <Example title="Web komponent teller">
-        <wc-counter />
+        <ChillCounter />
       </Example>
     </>
   )

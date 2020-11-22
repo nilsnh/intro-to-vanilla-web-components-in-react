@@ -6,7 +6,7 @@ export default function Counter() {
     <div className="counter">
       <button onClick={() => setCount((prevState) => prevState + 1)}>+</button>
       <button onClick={() => setCount((prevState) => prevState - 1)}>-</button>
-      <div>Current count: {count}</div>
+      <div>Counter: {count}</div>
       <style jsx>{`
         .counter {
           display: flex;
