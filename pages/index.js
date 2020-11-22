@@ -1,65 +1,29 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
 
 export default function Home() {
+  const pageTitle =
+    'Intro til web komponenter i React komponenter: Korleis og kvifor?'
   return (
-    <div className={styles.container}>
+    <>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>{pageTitle}</title>
       </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
+      <h1>{pageTitle}</h1>
+      <p>
+        Om du saumfarer React dokumentasjonen lengje nok så finn du til slutt ei
+        side som snakker om korleis React komponenter kan samhandle med web
+        komponenter. Men kvifor er det ønskeleg? Om du lurer på det så er dette
+        rette staden å vere! I dette foredraget vil eg gi ein intro til web
+        komponenter i kontekst av React, og snakke om når dei passer inn, når
+        dei kjem til kort og korleis framtida til denne teknologien ser ut.
+      </p>
+      <p>
+        Nils Norman Haukås er interaksjonsdesigner av utdanning og utvikler av
+        praksis. Til dagleg jobber han som teknolog ved Netlife Bergen og er
+        ekstra nøgd om han kan slette meir kode enn det han skriv. På fritida
+        blogger han om teknologi og samfunn på <a href="nilsnh.no">nilsnh.no</a>
+        .
+      </p>
+    </>
   )
 }
