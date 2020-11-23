@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Counter from '../components/counter'
 import WebComponentLoader from '../components/webComponentLoader'
+import Example from '../components/example'
 
 export default function WCInReact() {
   const pageTitle = 'Web komponenter i React'
@@ -19,25 +20,11 @@ export default function WCInReact() {
           <chill-counter />
         </WebComponentLoader>
       </Example>
+      <Example title="Web komponent teller V2">
+        <WebComponentLoader load={['chill-counter-v2']}>
+          <chill-counter-v2 />
+        </WebComponentLoader>
+      </Example>
     </>
-  )
-}
-
-function Example({ title, children }) {
-  return (
-    <section>
-      <h2>{title}</h2>
-      {children}
-      <style jsx>{`
-        h2 {
-          margin: 0;
-        }
-        section {
-          border: 3px solid var(--moz-green);
-          padding: var(--spacing-small);
-          margin-bottom: var(--spacing);
-        }
-      `}</style>
-    </section>
   )
 }

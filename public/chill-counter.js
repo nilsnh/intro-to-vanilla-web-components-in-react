@@ -16,7 +16,13 @@ class ChillCounter extends HTMLElement {
     super()
     this.counter = 0
     this.root = this.attachShadow({ mode: 'open' })
+    this.increment = this.increment.bind(this)
+    this.decrement = this.decrement.bind(this)
+    this.buildContents = this.buildContents.bind(this)
+    this.buildContents()
+  }
 
+  buildContents() {
     const wrapper = document.createElement('div')
     wrapper.className = 'counter'
     const style = document.createElement('style')
@@ -25,20 +31,26 @@ class ChillCounter extends HTMLElement {
     this.counterDiv = document.createElement('div')
     this.counterDiv.textContent = `Counter: ${this.counter}`
 
-    const btnIncrement = document.createElement('button')
-    const increment = this.increment.bind(this)
-    btnIncrement.addEventListener('click', increment)
-    btnIncrement.textContent = '+'
-    wrapper.appendChild(btnIncrement)
+    this.btnIncrement = document.createElement('button')
+    this.btnIncrement.addEventListener('click', this.increment)
+    this.btnIncrement.textContent = '+'
+    wrapper.appendChild(this.btnIncrement)
 
-    const btnDecrement = document.createElement('button')
-    const decrement = this.decrement.bind(this)
-    btnDecrement.addEventListener('click', decrement)
-    btnDecrement.textContent = '-'
-    wrapper.appendChild(btnDecrement)
+    this.btnDecrement = document.createElement('button')
+    this.btnDecrement.addEventListener('click', this.decrement)
+    this.btnDecrement.textContent = '-'
+    wrapper.appendChild(this.btnDecrement)
 
     wrapper.appendChild(this.counterDiv)
     this.root.appendChild(wrapper)
+  }
+
+  connectedCallback() {}
+
+  disconnectedCallback() {
+    this.btnIncrement.removeEventListener('click', this.increment)
+    this.btnDecrement.removeEventListener('click', this.decrement)
+    console.log('removing listeners')
   }
 
   increment() {
