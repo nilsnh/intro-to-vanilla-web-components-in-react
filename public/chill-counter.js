@@ -1,5 +1,3 @@
-import { useEffect } from 'react'
-
 const styles = `
   .counter {
     display: flex;
@@ -54,17 +52,7 @@ class ChillCounter extends HTMLElement {
   }
 }
 
-export default function ChillCounterWrapper() {
-  useEffect(() => {
-    const isDefined = customElements.get('chill-counter')
-    if (isDefined) {
-      return // No need to re-define component
-    }
-    customElements.define('chill-counter', ChillCounter)
-  }, [])
-  return (
-    <>
-      <chill-counter></chill-counter>
-    </>
-  )
+const isDefined = customElements.get('chill-counter')
+if (!isDefined) {
+  customElements.define('chill-counter', ChillCounter)
 }

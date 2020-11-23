@@ -10,6 +10,8 @@ function MyApp({ Component, pageProps }) {
       <style jsx>{`
         main {
           padding: var(--spacing);
+          margin: 0 auto;
+          max-width: 600px;
         }
       `}</style>
       <style global jsx>
