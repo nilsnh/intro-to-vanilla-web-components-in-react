@@ -17,9 +17,7 @@ export default function WCInReact() {
         <Counter />
       </Example>
       <Example title="Web komponent teller">
-        <WebComponentLoader load={['chill-counter']}>
-          <chill-counter />
-        </WebComponentLoader>
+        <chill-counter />
       </Example>
       <Example title="Web komponent teller V2">
         <WebComponentLoader load={['chill-counter-v2']}>

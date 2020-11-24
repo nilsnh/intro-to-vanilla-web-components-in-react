@@ -1,8 +1,12 @@
+import Head from 'next/head'
 import AppNav from '../components/appNav'
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
+      <Head>
+        <script src="/chill-counter.js" />
+      </Head>
       <main>
         <AppNav />
         <Component {...pageProps} />
