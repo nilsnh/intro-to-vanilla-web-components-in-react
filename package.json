@@ -1,6 +1,8 @@
 {
-  "name": "nextjs-web-components",
-  "version": "0.1.0",
+  "name": "lecture-web-components-in-react",
+  "author": "Nils Norman Haukås <mail@nilsnh.no>",
+  "version": "1.0.0",
+  "license": "NPLv5+",
   "private": true,
   "scripts": {
     "dev": "next dev",
