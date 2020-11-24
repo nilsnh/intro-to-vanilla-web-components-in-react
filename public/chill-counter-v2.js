@@ -8,8 +8,6 @@
       super()
       this.counter = 0
       this.root = this.attachShadow({ mode: 'open' })
-      this.increment = this.increment.bind(this)
-      this.decrement = this.decrement.bind(this)
     }
 
     connectedCallback() {
@@ -30,12 +28,12 @@
       h.cleanup()
     }
 
-    increment() {
+    increment = () => {
       this.counter++
       this.counterDiv.textContent = `Counter: ${this.counter}`
     }
 
-    decrement() {
+    decrement = () => {
       this.counter--
       this.counterDiv.textContent = `Counter: ${this.counter}`
     }

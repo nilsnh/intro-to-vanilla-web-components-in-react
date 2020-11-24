@@ -1,7 +1,12 @@
-;(async function () {
+;(function () {
   // Inspired by: https://alligator.io/web-components/attributes-properties/
   const template = document.createElement('template')
   template.innerHTML = `
+    <style>
+      div {
+        padding: 12px;
+      }
+    </style>
     <div>
       <slot></slot>
     </div>
@@ -24,10 +29,7 @@
       this.root = this.attachShadow({ mode: 'open' })
       this.root.appendChild(template.content.cloneNode(true))
       this.borderDiv = this.root.querySelector('div')
-      this.borderStyle = borderStyles[0]
-      this.flipBorder = this.flipBorder.bind(this)
-      this.renderBorder = this.renderBorder.bind(this)
-      this.checkIfParty = this.checkIfParty.bind(this)
+      this.borderStyle = 'solid'
     }
 
     static get observedAttributes() {
@@ -43,11 +45,11 @@
       }
     }
 
-    renderBorder() {
+    renderBorder = () => {
       this.borderDiv.style = `border: 5px ${this.borderStyle} ${this.color}`
     }
 
-    checkIfParty() {
+    checkIfParty = () => {
       const isParty = this.getAttribute('party')
       if (isParty === 'true' && !this.intervalID) {
         this.intervalID = setInterval(this.flipBorder, 1000)
@@ -57,7 +59,7 @@
       }
     }
 
-    flipBorder() {
+    flipBorder = () => {
       const currentIndex = borderStyles.indexOf(this.borderStyle)
       if (currentIndex === borderStyles.length - 1) {
         this.borderStyle = borderStyles[0]

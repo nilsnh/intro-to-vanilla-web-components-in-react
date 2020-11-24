@@ -6,6 +6,7 @@ export default function Example({ title, children }) {
       <style jsx>{`
         h2 {
           margin: 0;
+          margin-bottom: var(--spacing-small);
         }
         section {
           border: 3px solid var(--moz-green);
