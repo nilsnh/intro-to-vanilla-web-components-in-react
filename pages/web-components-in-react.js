@@ -25,6 +25,25 @@ export default function WCInReact() {
           <chill-counter-v2 />
         </WebComponentLoader>
       </Example>
+      <Example title="Nøstede komponenter">
+        <WebComponentLoader load={['fancy-border']}>
+          <fancy-border color="green">
+            <p className="fancy-border">
+              Her er noe JSX tekst inni fancy-border.
+            </p>
+          </fancy-border>
+          <p>Men kva skjer om me freister å style innholdet inni?</p>
+        </WebComponentLoader>
+        <style jsx global>
+          {`
+            .fancy-border {
+              padding: 12px;
+              border: 5px solid blueviolet;
+            }
+          `}
+        </style>
+        <div className="fancy-border">just a test</div>
+      </Example>
     </>
   )
 }
