@@ -25,7 +25,6 @@ export default function KindOfArmored({ children }) {
         'removing shadowRoot div',
         shadowRoot.removeChild(domRef.current)
       )
-      domRef.current = undefined
     }
   }, [setLoading])
 
