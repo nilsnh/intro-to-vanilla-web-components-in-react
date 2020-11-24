@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Counter from '../components/counter'
 import WebComponentLoader from '../components/webComponentLoader'
 import Example from '../components/example'
+import PeskyPopup from '../components/peskyPopup'
 
 export default function WCInReact() {
   const pageTitle = 'Web komponenter i React'
@@ -41,6 +42,9 @@ export default function WCInReact() {
           `}
         </style>
         <div className="fancy-border">just a test</div> */}
+      </Example>
+      <Example title="Pop-ups og skygge-dom">
+        <PeskyPopup msg="Hjelpes! Eit sprett-opp-vindauge." />
       </Example>
     </>
   )
