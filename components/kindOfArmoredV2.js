@@ -3,7 +3,7 @@ import { useEffect, useState, useRef } from 'react'
 
 export default function KindOfArmoredV2({ children }) {
   const mountTarget = useRef()
-  const domRef = useRef(document.createElement('div'))
+  const domRef = useRef()
   const [isLoading, setIsLoading] = useState(true)
   useEffect(() => {
     const shadowRoot = domRef.current.attachShadow({ mode: 'closed' })
