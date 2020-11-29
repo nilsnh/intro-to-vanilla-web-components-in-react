@@ -1,4 +1,4 @@
-# Intro til Web componenter i React
+# Intro til web componenter i React
 
 Inneheld:
 
