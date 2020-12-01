@@ -7,7 +7,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "release": "NEXT_PUBLIC_BASE_PATH=/project/web-components-in-react next build && next export -o web-components-in-react"
   },
   "dependencies": {
     "@webcomponents/webcomponentsjs": "^2.5.0",

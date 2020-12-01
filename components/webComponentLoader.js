@@ -25,7 +25,7 @@ export default function WebComponentLoader({
     // Add script tags to load the dependencies.
     wcToLoad.forEach((name) => {
       const scriptTag = document.createElement('script')
-      scriptTag.src = `/${name}.js`
+      scriptTag.src = `${process.env.NEXT_PUBLIC_BASE_PATH}/${name}.js`
       document.body.appendChild(scriptTag)
     })
   }, [])

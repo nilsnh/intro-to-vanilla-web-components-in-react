@@ -5,7 +5,11 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <script src="/chill-counter.js" />
+        <script src={`${process.env.NEXT_PUBLIC_BASE_PATH}/chill-counter.js`} />
+        <link
+          rel="icon"
+          href={`${process.env.NEXT_PUBLIC_BASE_PATH}/favicon.ico`}
+        />
       </Head>
       <main>
         <AppNav />
