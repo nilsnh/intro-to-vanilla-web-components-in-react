@@ -21,8 +21,8 @@ export default function Home() {
         Nils Norman Haukås er interaksjonsdesigner av utdanning og utvikler av
         praksis. Til dagleg jobber han som teknolog ved Netlife Bergen og er
         ekstra nøgd om han kan slette meir kode enn det han skriv. På fritida
-        blogger han om teknologi og samfunn på <a href="nilsnh.no">nilsnh.no</a>
-        .
+        blogger han om teknologi og samfunn på{' '}
+        <a href="https://nilsnh.no">nilsnh.no</a>.
       </p>
     </>
   )
